@@ -7,29 +7,37 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: tdBGColor,
-        elevation: 0,
-        title:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Icon(
-            Icons.menu,
-            color: tdBlack,
-            size: 30,
-          ),
+      backgroundColor: tdBGColor,
+      body: Container(
+        child: Column(children: [
           Container(
-            height: 40,
-            width: 40,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: Image.asset('assets/flower.png'),
-            ),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(20)),
           ),
         ]),
       ),
-      body: Container(
-        child: Text('This is Home Page'),
-      ),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      backgroundColor: tdBGColor,
+      elevation: 0,
+      title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Icon(
+          Icons.menu,
+          color: tdBlack,
+          size: 30,
+        ),
+        Container(
+          height: 40,
+          width: 40,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(60),
+            child: Image.asset('assets/flower.png'),
+          ),
+        ),
+      ]),
     );
   }
 }
