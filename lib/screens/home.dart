@@ -9,7 +9,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: tdBGColor,
-        title: Row(children: [
+        elevation: 0,
+        title:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Icon(
             Icons.menu,
             color: tdBlack,
@@ -19,7 +21,8 @@ class Home extends StatelessWidget {
             height: 40,
             width: 40,
             child: ClipRRect(
-              child: Image.asset('assets/flutter.png'),
+              borderRadius: BorderRadius.circular(60),
+              child: Image.asset('assets/flower.png'),
             ),
           ),
         ]),
